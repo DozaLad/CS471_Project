@@ -1,12 +1,12 @@
-CS471 Project - Producer / Consumer Sales Program
+CS471 Project - Producer / Consumer Sales Program  
 
-Authors: Antonio Mendoza and Joseph Jutton
-Course: CS471
-Project Part: Producer / Consumer with Threads and Semaphores
+Authors: Antonio Mendoza and Joseph Jutton  
+Course: CS471  
+Project Part: Producer / Consumer with Threads and Semaphores  
 
 ---
 
-DESCRIPTION
+**DESCRIPTION**
 
 The program aims to simulate a multi-threaded producer consumer system that models retail sails data across different store locations and registers. Producers generate randomized sales records and place them in a shared circular buffer, while consumers retrieve and process the records to compute the sales statistics.
 
@@ -30,8 +30,9 @@ The sleep interval range for producer threads is read from the input:
 
 ---
 
-DIRECTORY STRUCTURE
+**DIRECTORY STRUCTURE**
 
+```
 PRODCON/
 │
 |-- source/             > Contains all C++ source files (.cpp)
@@ -39,10 +40,11 @@ PRODCON/
 |-- input/              > Contains input file (sleep_times.txt)
 |-- output/             > Contains generated output files (auto-created at runtime)
 |-- README.txt          > This file
+```
 
 ---
 
-COMPILATION AND RUN INSTRUCTIONS (WSL / Ubuntu / Linux)
+**COMPILATION AND RUN INSTRUCTIONS (WSL / Ubuntu / Linux)**
 
 Open a terminal in the project directory (PRODCON directory) and run the following command:
 
@@ -62,7 +64,7 @@ Examples:
 
 ---
 
-INPUT FILE FORMAT
+**INPUT FILE FORMAT**
 
 The file input/sleep_times.txt contains exactly two integers on a single line:
 <minSleep> <maxSleep>
@@ -70,7 +72,7 @@ Thats it. These values define the minimum and maximum sleep duration in millisec
 
 ---
 
-OUTPUT
+**OUTPUT**
 
 At runtime, the program does the following:
 1. Creates the output/ directory if not already present
@@ -90,7 +92,7 @@ At runtime, the program does the following:
 
 ---
 
-NOTES
+**NOTES**
 * Shared buffer size created to be 2 * num_producers
 * Sale amounts limited to a range from $0.50 to $999.99
 * Sale dates are randomly generated in the range of 1-30: day, 1-12: month, and with a fixed year of 2016
