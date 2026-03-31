@@ -55,19 +55,19 @@ then:
     ./executable/prodcon <num_producers> <num_consumers>
 
 Arguments:
-<num_producers> = Number of producer threads, with each representing an individual store
-<num_consumers> = Number of consumer threads
+<num_producers> = Number of producer threads, with each representing an individual store  
+<num_consumers> = Number of consumer threads  
 
-Examples:
-./executable/main 2 2
-./executable/main 5 4
+Examples:  
+./executable/main 2 2  
+./executable/main 5 4  
 
 ---
 
 **INPUT FILE FORMAT**
 
 The file input/sleep_times.txt contains exactly two integers on a single line:
-<minSleep> <maxSleep>
+'<minSleep> <maxSleep>'
 Thats it. These values define the minimum and maximum sleep duration in milliseconds for the producer threads between record generations. The rubric did not specify in detail the depth of the input file, so it is simplified to this.
 
 ---
