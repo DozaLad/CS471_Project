@@ -67,7 +67,7 @@ Examples:
 **INPUT FILE FORMAT**
 
 The file input/sleep_times.txt contains exactly two integers on a single line:
-'<minSleep> <maxSleep>'
+```<minSleep> <maxSleep>```  
 Thats it. These values define the minimum and maximum sleep duration in milliseconds for the producer threads between record generations. The rubric did not specify in detail the depth of the input file, so it is simplified to this.
 
 ---
