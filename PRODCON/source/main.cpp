@@ -41,6 +41,7 @@ sem_t emptySem;
 sem_t fullSem;
 mutex bufferMutex;
 mutex statsMutex;
+mutex coutMutex;
 
 // monitor thread, checks to make sure 1000 records are produced and that consumers can exit safely
 void* monitor(void* arg) {
@@ -149,12 +150,15 @@ void* consumer(void* arg) {
     }
 
     // print local stats
-    cout << "\nConsumer " << consumerID << " Stats:\n";
-    cout << "Records consumed: " << localCount << "\n";
-    cout << "Local aggregate sales: $" << localAggregate << "\n";
-    for (int i = 0; i < 12; i++)
-        if (localMonthlySales[i] > 0)
-            cout << "  Month " << i+1 << ": $" << localMonthlySales[i] << "\n";
+    {
+        lock_guard<mutex> lock(coutMutex);
+        cout << "\nConsumer " << consumerID << " Stats:\n";
+        cout << "Records consumed: " << localCount << "\n";
+        cout << "Local aggregate sales: $" << localAggregate << "\n";
+        for (int i = 0; i < 12; i++)
+            if (localMonthlySales[i] > 0)
+                cout << "  Month " << i+1 << ": $" << localMonthlySales[i] << "\n";
+    }
 
     statsMutex.lock();
     aggregateSales += localAggregate;

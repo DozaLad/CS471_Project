@@ -1,0 +1,28 @@
+For running the code with 2 Producers, and 2 Consumers:
+    Total simulation time: 12420ms
+
+For running the code with 2 Producers, and 5 Consumers:
+    Total simulation time: 12483ms
+
+For running the code with 2 Producers, and 10 Consumers:
+    Total simulation time: 12404ms
+
+========================================================================================================
+
+For running the code with 5 Producers, and 2 Consumers:
+    Total simulation time: 5490ms
+
+For running the code with 5 Producers, and 5 Consumers:
+    Total simulation time: 5336ms
+
+For running the code with 5 Producers, and 10 Consumers:
+    Total simulation time: 5440ms
+
+========================================================================================================
+
+For running the code with 10 Producers, and 2 Consumers:
+    Total simulation time: 5889ms
+For running the code with 10 Producers, and 5 Consumers:
+    Total simulation time: 4545ms
+For running the code with 10 Producers, and 5 Consumers:
+    Total simulation time: 4276ms
